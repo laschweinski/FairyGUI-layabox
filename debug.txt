@@ -1,0 +1,19 @@
+1,0.00,,0,Project command:/Users/laxp/workspace/laya2dDemoAS/.actionScriptProperties;iflash=false;windowshow=false;chromerun=false;quickcompile=true
+Project configuration:/Users/laxp/workspace/laya2dDemoAS/.actionScriptProperties.
+1,0.00,,0,output path:/Users/laxp/workspace/laya2dDemoAS/bin/h5/
+1,0.00,,0,Main Class:/Users/laxp/workspace/laya2dDemoAS/src/FairyguiLib.as
+1,0.00,,0,output file:FairyguiLib
+1,0.00,,0,compilerSourcePath /Users/laxp/workspace/laya2dDemoAS/libs111/laya/src/
+
+1,0.00,,0,Compile Path:/Users/laxp/workspace/laya2dDemoAS/src/
+
+1,0.00,,0,Compile Path:/Users/laxp/workspace/laya2dDemoAS/libs111/laya/src/
+
+1,0.00,/Users/laxp/workspace/laya2dDemoAS/src,0,Collect
+1,0.00,/Users/laxp/workspace/laya2dDemoAS/libs111/laya/src,0,Collect
+1,2.00,,0,read class message
+1,89.90,,0,Disable Flash3D /Users/laxp/workspace/laya2dDemoAS/src/FairyguiLib.as
+12,89.90,/Users/laxp/workspace/laya2dDemoAS/bin/h5/FairyguiLib.max.js,1029036,
+11,89.90,/Users/laxp/workspace/laya2dDemoAS/bin/h5/FairyguiLib.max.html,2258,
+******************************************************************************
+14,89.90,,0,
