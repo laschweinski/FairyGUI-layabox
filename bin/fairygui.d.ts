@@ -289,6 +289,7 @@ declare module fairygui {
         getController(name: string): Controller;
         removeController(c: Controller): void;
         controllers: Array<any>;
+        transitions: Array<any>;
         childStateChanged(child: GObject): void;
         applyController(c: Controller): void;
         applyAllControllers(): void;

@@ -23588,16 +23588,16 @@ var GComponent=(function(_super){
 		this.height=value+this._margin.top+this._margin.bottom;
 	});
 
-	__getset(0,__proto,'baseUserData',function(){
-		var buffer=this.packageItem.rawData;
-		buffer.seek(0,4);
-		return buffer.readS();
-	});
-
-	__getset(0,__proto,'mask',function(){
-		return this._mask;
+	__getset(0,__proto,'viewWidth',function(){
+		if (this._scrollPane !=null)
+			return this._scrollPane.viewWidth;
+		else
+		return this.width-this._margin.left-this._margin.right;
 		},function(value){
-		this.setMask(value,false);
+		if (this._scrollPane !=null)
+			this._scrollPane.viewWidth=value;
+		else
+		this.width=value+this._margin.left+this._margin.right;
 	});
 
 	/**
@@ -23629,18 +23629,20 @@ var GComponent=(function(_super){
 		return this._scrollPane;
 	});
 
-	__getset(0,__proto,'controllers',function(){
-		return this._controllers;
+	__getset(0,__proto,'baseUserData',function(){
+		var buffer=this.packageItem.rawData;
+		buffer.seek(0,4);
+		return buffer.readS();
 	});
 
-	__getset(0,__proto,'apexIndex',function(){
-		return this._apexIndex;
+	__getset(0,__proto,'mask',function(){
+		return this._mask;
 		},function(value){
-		if (this._apexIndex !=value){
-			this._apexIndex=value;
-			if (this._childrenRenderOrder==2)
-				this.buildNativeDisplayList();
-		}
+		this.setMask(value,false);
+	});
+
+	__getset(0,__proto,'transitions',function(){
+		return this._transitions;
 	});
 
 	__getset(0,__proto,'opaque',function(){
@@ -23663,20 +23665,22 @@ var GComponent=(function(_super){
 		}
 	});
 
-	__getset(0,__proto,'viewWidth',function(){
-		if (this._scrollPane !=null)
-			return this._scrollPane.viewWidth;
-		else
-		return this.width-this._margin.left-this._margin.right;
+	__getset(0,__proto,'apexIndex',function(){
+		return this._apexIndex;
 		},function(value){
-		if (this._scrollPane !=null)
-			this._scrollPane.viewWidth=value;
-		else
-		this.width=value+this._margin.left+this._margin.right;
+		if (this._apexIndex !=value){
+			this._apexIndex=value;
+			if (this._childrenRenderOrder==2)
+				this.buildNativeDisplayList();
+		}
 	});
 
 	__getset(0,__proto,'numChildren',function(){
 		return this._children.length;
+	});
+
+	__getset(0,__proto,'controllers',function(){
+		return this._controllers;
 	});
 
 	__getset(0,__proto,'displayListContainer',function(){

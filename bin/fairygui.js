@@ -10517,6 +10517,10 @@ var GComponent=(function(_super){
 		}
 	});
 
+	__getset(0,__proto,'transitions',function(){
+		return this._transitions;
+	});
+
 	__getset(0,__proto,'controllers',function(){
 		return this._controllers;
 	});

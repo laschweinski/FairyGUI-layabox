@@ -581,7 +581,11 @@ package fairygui {
 			
 			return null;
 		}
-		
+
+		public function get transitions(): Vector.<Transition> {
+            return this._transitions;
+        }
+
 		public function isChildInView(child: GObject): Boolean {
 			if(this._displayObject.scrollRect != null) {
 				return child.x + child.width >= 0 && child.x <= this.width
