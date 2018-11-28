@@ -1222,6 +1222,14 @@ var GObject=(function(){
 		this.off("click",thisObj,listener);
 	}
 
+	__proto.addClickListener=function(listener,thisObj){
+		this.onClick(thisObj,listener);
+	}
+
+	__proto.removeClickListener=function(listener,thisObj){
+		this.offClick(thisObj,listener);
+	}
+
 	__proto.hasClickListener=function(){
 		return this._displayObject.hasListener("click");
 	}

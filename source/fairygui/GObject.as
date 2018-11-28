@@ -879,6 +879,14 @@ package fairygui {
 		public function offClick(thisObj: *, listener: Function): void {
 			this.off(Event.CLICK, thisObj, listener);
 		}
+
+		public function addClickListener(listener: Function, thisObj: *): void {
+            this.onClick(thisObj, listener );
+        }
+
+        public function removeClickListener(listener: Function, thisObj: *): void {
+            this.offClick(thisObj, listener );
+        }
 		
 		public function hasClickListener(): Boolean {
 			return this._displayObject.hasListener(Event.CLICK);

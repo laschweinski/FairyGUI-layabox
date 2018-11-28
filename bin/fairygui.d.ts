@@ -694,6 +694,8 @@ declare module fairygui {
         dispose(): void;
         onClick(thisObj: any, listener: Function, args?: Array<any>): void;
         offClick(thisObj: any, listener: Function): void;
+        addClickListener(listener: Function, thisObj: any): void;
+        removeClickListener(listener: Function, thisObj: any): void;
         hasClickListener(): boolean;
         on(type: string, thisObject: any, listener: Function, args?: Array<any>): void;
         off(type: string, thisObject: any, listener: Function): void;
